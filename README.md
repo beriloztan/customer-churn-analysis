@@ -33,6 +33,12 @@ Logistic Regression modeli ile churn tahmini yapıldı.
 | Düşük sipariş sayısı | 1-2 sipariş sonrası kaybediliyor | Onboarding e-mail serisi |
 | Orta segment | Düzenli ama az harcıyor | Loyalty programı |
 
+### 4. Model Interpretability (SHAP)
+- Used SHAP LinearExplainer to explain model decisions
+- **toplam_siparis** is the dominant feature — low order count strongly increases churn probability
+- Individual customer explanations show exactly why the model flagged each customer as high risk
+- Key insight: Order frequency matters more than total spending for churn prediction
+
 ## Sonuç
 Modelin tespit ettiği yüksek riskli müşterilere yönelik proaktif kampanyalar 
 yapılsaydı, müşteri kaybının önemli bir kısmı önlenebilirdi.
